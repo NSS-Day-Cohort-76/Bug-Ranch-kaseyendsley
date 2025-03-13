@@ -76,11 +76,17 @@ Your journey will take you through the wildness of the American Midwest and acro
 ```
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
-2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+   > The 'drovers' variable is set equal to the result of the 'hireDrovers' function when that function is called.  It calculates how many cattle there are and divides that number by 10 to produce the sum of how many drovers are
+   needed. 
+
+2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. 
+ Explain what the values of both the `drover` and the `drovers` variables are.
+   > 'drovers' is an array containing each individual drover as an object. 
+
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+   >  https://www.loom.com/share/db73c5d1af954973af18ba13b750a10c?sid=f4ef1451-b703-44a6-af9e-3f370ee95453
+    I did not feel confident on this, would love some feedback!
+
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -88,11 +94,16 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+    >  forestNumber is a variable being initialized with a value of 0.  As long as the forestNumber is less than the areas.forests variable, the forestNumber
+    variable will iterate again and increase in value by 1.  Then, each new iteration is pushed to the 'Journey' variable to be individually listed when the 
+    function is called.
+
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   > 'database' is an array that contains two named lists (elements) as it's value.  One of these individual lists contains 'drovers', and the other 'cattleType' - the data that each of these contains are called 'objects'.
+
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+   > 'herdSize' is defining how many cattle are currently in the herd.  It gets it's value from the fact that the hireDrovers function on the main.js file
+   is given the argument of cattleToDrive, which is a const variable that was initialized with the value of 50.
 
 ## When You Are Done
 

@@ -7,7 +7,7 @@ const createRivers = () => {
 
 const createMountains = () => {
     const mountains = Math.floor(Math.random() * 2) + 1
-    return mauntains
+    return mountains
 }
 
 const createForests = () => {
@@ -20,14 +20,19 @@ const createPlains = () => {
     return plains
 }
 
+// 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a 
+// variable named `areas` which will have the value of an object. 
+// Use your debugger to show what the value of each key is on that object.
+
+
 const journeyMaker = () => {
     const journey = []
 
     const areas = {
-        rivers: createRiver(),
-        forests: createForest(),
-        mountains: createMountain(),
-        plains: createPlain()
+        rivers: createRivers(),
+        forests: createForests(),
+        mountains: createMountains(),
+        plains: createPlains()
     }
 
     for (let riverNumber = 0; riverNumber < areas.rivers; riverNumber++) {
@@ -51,5 +56,6 @@ const journeyMaker = () => {
 
 module.exports = {
     createRivers, createForests,
-    createMountains, createPlains
+    createMountains, createPlains,
+    journeyMaker
 }
